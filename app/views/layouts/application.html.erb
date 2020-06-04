@@ -43,6 +43,14 @@
     <p class="alert"><%= alert %></p>
   </div>
   <main>
+    <!--検索フォーム-->
+    <div class="col-md-5 col-md-offset-5">
+      <% if user_signed_in? %>
+      <div class="container">
+        <%= render 'layouts/searchform' %>
+      </div>
+      <% end %>
+    </div>
     <div class="container">
       <%= yield %>
     </div>
